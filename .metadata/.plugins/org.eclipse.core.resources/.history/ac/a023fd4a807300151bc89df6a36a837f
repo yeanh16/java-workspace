@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+
+public class TutorGroup 
+{
+	//data fields
+	private String name;
+	private ArrayList<String> students; ;
+
+	//constructor
+	public TutorGroup(String name)
+	{
+		this.name = name;
+		this.students = new ArrayList<String>(); 
+	}
+	
+	// toString method
+
+	public String toString()
+	{
+		return "Tutor: " + this.name + ", Students: " + this.students;
+	}
+
+	//get methods
+	public String getName()
+	{
+		return this.name;
+	}
+			
+	public String getStudent(int index)
+	{
+		return students.get(index);
+	}
+	
+
+	//set methods
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+}

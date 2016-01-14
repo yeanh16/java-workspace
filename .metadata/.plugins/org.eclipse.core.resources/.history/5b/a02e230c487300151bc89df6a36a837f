@@ -1,0 +1,7 @@
+import java.util.ArrayList;
+
+public class TutorGroup 
+{
+	ArrayList ints = new ArrayList();
+	int[] numbers = new int[99];
+}
