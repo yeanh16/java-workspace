@@ -1,0 +1,38 @@
+package git.part1;
+
+import java.util.*;
+
+public class lotto {
+  
+
+    public static void main(String[] args) 
+    {
+    	int count = 1;
+       List<Integer> numbers = new ArrayList();
+       for (int i=1;i<20;i++)
+       {
+    	   numbers.add(i);
+       }
+       
+       boolean flag = false;
+       double total = 0;
+       for(int i=1; i<100;i++)
+       {
+    	   while (flag == false)
+    	   {
+    		   Collections.shuffle(numbers);
+    		   if(numbers.get(1) == 1 && numbers.get(2)==2 && numbers.get(3)==3 )
+    		   {
+    			   total = total + count;
+    			   flag = true;
+    		   }
+    		   else
+    		   {
+    			   count++;
+    		   }
+       }
+    	   System.out.println(total/100);
+     
+    }
+}}
+

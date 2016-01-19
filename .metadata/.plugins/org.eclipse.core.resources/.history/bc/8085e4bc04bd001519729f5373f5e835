@@ -1,0 +1,59 @@
+package git.part1;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.Random;
+import java.util.Set;
+
+public class lotto 
+{
+	
+	public static void main(String[] args)
+	{
+		int count =0;
+		boolean flag = true;
+		
+		while (flag = false)
+		{
+		 int[] box1 = new int[59];
+		 
+		 for (int i = 1; i<=59; i++)
+		 {
+			 box1[i]=i;
+		 }
+		 Collections.shuffle(Arrays.asList(box1));
+		 int first = box1[1];
+		 int second = box1[2];
+		 int third = box1[3];
+		 int fourth = box1[4];
+		 int fifth = box1[5];
+		 int sixth = box1[6];
+
+		 int[] powerball = new int[35];
+		 
+		 for (int i = 1; i<=35; i++)
+		 {
+			 powerball[i]=i;
+		 }
+		 Collections.shuffle(Arrays.asList(powerball));
+		 int pickedpowerball = powerball[1];
+		 
+		if(first==1 && second==2 && third==3 && fourth==4 && fifth==5 && pickedpowerball==6)
+		{
+			System.out.println(count);
+			flag = false;
+		}
+		else
+		{
+			count++;
+		}
+		
+	}
+
+	
+}}
+
+
