@@ -29,4 +29,5 @@
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.TreeSet"/>
+<fullyQualifiedTypeName name="rp.systems.StoppableRunnable"/>
 </qualifiedTypeNameHistroy>

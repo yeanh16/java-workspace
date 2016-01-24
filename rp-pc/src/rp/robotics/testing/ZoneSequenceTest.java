@@ -11,9 +11,9 @@ import java.util.Stack;
 
 import lejos.robotics.localization.PoseProvider;
 import lejos.robotics.navigation.Pose;
-import rp.robotics.simulation.Rate;
 import rp.robotics.testing.TargetZone.Status;
 import rp.systems.StoppableRunnable;
+import rp.util.Rate;
 
 /**
  * 
@@ -111,6 +111,7 @@ public class ZoneSequenceTest<T extends PoseProvider, C extends StoppableRunnabl
 				assertFalse(
 						"Controller must not be alive 100 milliseconds after stop is called",
 						t.isAlive());
+
 			} else {
 				t.join(5000);
 			}
@@ -119,7 +120,7 @@ public class ZoneSequenceTest<T extends PoseProvider, C extends StoppableRunnabl
 			fail(e.getMessage());
 			e.printStackTrace();
 		}
-		System.out.println("Test done");
+		// System.out.println("Test done");
 
 	}
 

@@ -1,0 +1,32 @@
+package rp.robotics.assignments.individual.ex1;
+
+import rp.assignments.individual.ex1.Ex1Tests;
+import rp.robotics.DifferentialDriveRobot;
+import rp.robotics.DifferentialDriveRobotPC;
+import rp.robotics.testing.TestViewer;
+import rp.robotics.testing.ZoneSequenceTestWithSim;
+import rp.systems.StoppableRunnable;
+
+public class SolutionFactory {
+
+    public static StoppableRunnable createEquilateralTriangleController(DifferentialDriveRobot _robot, Float _sideLength) {
+    	triangle tri = new triangle(_robot,_sideLength);
+    	tri.run();
+    	return tri;
+    }
+    
+    public static StoppableRunnable createSquareController( DifferentialDriveRobot _robot, Float _sideLength){
+		square sq = new square(_robot,_sideLength);
+    	return sq;
+    	
+    }
+    
+    public static StoppableRunnable createDecagonController( DifferentialDriveRobot _robot, Float _sideLength){
+		
+    	return null;
+    	
+    }
+   
+
+
+}

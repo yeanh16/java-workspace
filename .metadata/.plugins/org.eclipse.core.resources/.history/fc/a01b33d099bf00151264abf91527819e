@@ -1,0 +1,15 @@
+package rp.robotics.assignments.individual.ex1;
+
+import rp.robotics.DifferentialDriveRobot;
+import rp.systems.StoppableRunnable;
+
+public class SolutionFactory {
+
+    public static StoppableRunnable createEquilateralTriangleController(DifferentialDriveRobot _robot, Float _sideLength) {
+    	triangle tri = new triangle(_robot,_sideLength);
+    	return ;
+    }
+
+
+
+}

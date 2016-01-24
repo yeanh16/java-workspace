@@ -1,0 +1,29 @@
+package rp.assignments.individual.ex1.copy;
+
+import rp.robotics.DifferentialDriveRobot;
+import rp.systems.StoppableRunnable;
+
+public class SolutionFactory {
+
+    public static StoppableRunnable createEquilateralTriangleController(DifferentialDriveRobot _robot, Float _sideLength) {
+    	triangle tri = new triangle(_robot,_sideLength);
+    	tri.run();
+    	return tri;
+    }
+    
+    public static StoppableRunnable createSquareController( DifferentialDriveRobot _robot, Float _sideLength){
+		square sq = new square(_robot,_sideLength);
+    	return sq;
+    	
+    }
+    
+    public static StoppableRunnable createDecagonController( DifferentialDriveRobot _robot, Float _sideLength){
+		decagon dc = new decagon(_robot,_sideLength);
+    	return dc;
+    	
+    }
+    
+
+    
+
+}

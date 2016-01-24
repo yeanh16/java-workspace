@@ -1,7 +1,5 @@
 package rp.robotics.simulation;
 
-import static org.junit.Assert.fail;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -20,6 +18,7 @@ import rp.robotics.TouchSensorListener;
 import rp.robotics.mapping.RPLineMap;
 import rp.robotics.visualisation.MapVisualisationComponent;
 import rp.systems.StoppableRunnable;
+import rp.util.Rate;
 
 /**
  * This combines a simulated robot with a map to create a simple simulation of
@@ -135,8 +134,13 @@ public class MapBasedSimulation implements StoppableRunnable,
 								sensor.listener
 										.sensorPressed(new TouchSensorEvent(
 												100, 3));
-								if (System.currentTimeMillis() - start > 100) {
-									fail("TouchSensorListener must respond faster than 100ms");
+								long responseTime = System.currentTimeMillis()
+										- start;
+								if (responseTime > 100) {
+									// fail("TouchSensorListener must respond faster than 100ms");
+									System.out
+											.println("WARNING: TouchSensorListener must respond faster than 100ms. Response time was "
+													+ responseTime + "ms");
 								}
 							}
 						} else if (sensor.triggered) {

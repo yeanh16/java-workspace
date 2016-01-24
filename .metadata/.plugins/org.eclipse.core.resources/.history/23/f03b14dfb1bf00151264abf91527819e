@@ -1,0 +1,41 @@
+package rp.robotics.assignments.individual.ex1;
+
+import javax.naming.spi.DirStateFactory.Result;
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.notification.Failure;
+
+import rp.assignments.individual.ex1.Ex1Tests;
+import rp.robotics.DifferentialDriveRobot;
+import rp.robotics.DifferentialDriveRobotPC;
+import rp.robotics.testing.TestViewer;
+import rp.robotics.testing.ZoneSequenceTestWithSim;
+import rp.systems.StoppableRunnable;
+
+public class SolutionFactory {
+
+    public static StoppableRunnable createEquilateralTriangleController(DifferentialDriveRobot _robot, Float _sideLength) {
+    	triangle tri = new triangle(_robot,_sideLength);
+    	tri.run();
+    	Ex1Tests tests = new Ex1Tests();
+    	ZoneSequenceTestWithSim<DifferentialDriveRobotPC, ?> test = tests.createTriangleTest();
+    	TestViewer demo = new TestViewer(test, test.getSimulation());
+    	demo.run();
+    	return tri;
+    }
+    
+    public static StoppableRunnable createSquareController( DifferentialDriveRobot _robot, Float _sideLength){
+		square sq = new square(_robot,_sideLength);
+    	return sq;
+    	
+    }
+    
+    public static StoppableRunnable createDecagonController( DifferentialDriveRobot _robot, Float _sideLength){
+		decagon dc = new decagon(_robot,_sideLength);
+    	return dc;
+    	
+    }
+   
+
+
+}

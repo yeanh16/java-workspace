@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;communication-and-concurrency&apos;&#x0D;&#x0A;- Original project: &apos;communication-and-concurrency&apos;&#x0D;&#x0A;- Original element: &apos;communication-and-concurrency/1-threads/sleep-and-work-modified-in-the-lecture/many&apos;" description="Delete element" element1="/1-threads\/sleep-and-work-modified-in-the-lecture\/many" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1453476380118" subPackages="false" version="1.0"/>
+</session>

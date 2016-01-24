@@ -23,7 +23,7 @@ public class lotto {
     	   while (flag == false)
     	   {
     		   Collections.shuffle(numbers);
-    		   if(numbers.get(1) == 1 && numbers.get(2)==2 && numbers.get(3)==3 )
+    		   if(numbers.get(1) == 1 ||numbers.get(1) == 2||numbers.get(1) == 3 && numbers.get(2)==2||numbers.get(2) == 1||numbers.get(2) == 3 && numbers.get(3)==3||numbers.get(3) == 2||numbers.get(3) == 1 )
     		   {
     			   total = total + count;
     			   flag = true;
@@ -34,7 +34,7 @@ public class lotto {
     		   }
     	   }
        }
-       System.out.println(total/100);
+       System.out.println(total);
     }
   } 
 
